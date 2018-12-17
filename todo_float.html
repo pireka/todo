@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Todos float</title>
+    <link rel="stylesheet" type="text/css" href="css/todo_float.css">
+</head>
+<body>
+    <header>
+        <h1>todos</h1>
+    </header>
+    <div class="notepad">
+        <form action="" method="post">
+            <div class="notepad__header">
+                    <button class="btn__arrow-down"></button>
+                    <input type="text" id="textInput"name="textinput" class="notepad__textinput" placeholder="What needs to be done?">
+                    <div class="clearfix"></div>
+                    <!--<input type="submit" id="btnAdd" value="Add">-->
+            </div>
+            
+            <div class="notepad__list">
+                <ul>
+                    <li><input type="checkbox" id="listitem1" name="listitem" class="list__checkbox" checked><label for="listitem1" class="list__label">Milch</label><button class="btn__close">x</button></li>
+                    <li><input type="checkbox" id="listitem2" name="listitem" class="list__checkbox"><label for="listitem2" class="list__label">Wasser</label><button class="btn__close">x</button></li>
+                    <li><input type="checkbox" id="listitem3" name="listitem" class="list__checkbox"><label for="listitem3" class="list__label">Orangensaft</label><button class="btn__close">x</button></li>
+                    <li><input type="checkbox" id="listitem4" name="listitem" class="list__checkbox"><label for="listitem4" class="list__label">Whatever</label><button class="btn__close">x</button></li>
+                    <li class="list__status">3 items left</li>
+                </ul>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

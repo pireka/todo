@@ -1,0 +1,126 @@
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body{
+    background-color: lightgray;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    
+}
+h1{
+    text-align: center;
+    font-size: 6.25rem;
+    color: #af2f2f;
+    font-weight: lighter; /*dünner*/
+    margin:0;
+}
+.notepad{
+    width: 30%;
+    margin: 0 auto; /*in die Mitte*/ 
+    background-color: #ffffff;
+    border: 1px solid #ededed;
+    box-shadow: 5px 5px 35px rgba(0,0,0, 0.5); /*schattentwurf minuswerte auf andere seite; 35 px schöne farbverlauf*/
+    /*box-shadow: 0 10px 0 10px rgba(0,0,0, 0.5), 0 20px 0 10px hotpink;*/
+    font-size: 1.5rem;
+    color: #4d4d4d;
+}
+/* ?--- Stapel effekt funktioniert nicht
+.notepad:before,
+.notepad:after{
+    width: 40%;
+    margin: 0 auto;  
+    height:10px;
+    background-color: #ffffff;
+    border: 1px solid #ededed;
+    transform: translateX(-50%);
+    left:50%;
+    top:calc(100% + 11px);
+*/
+
+}
+.notepad__header{
+    width:100%;
+    height: 40px;
+}
+.btn__arrow-down{
+    /*border: 1px solid red;*/
+    height:30px;/*grösse der button*/
+    width:30px;
+    background-image: url(../img/todo_arrow_down.svg);
+    background-size:20px; /*grösse der svg*/
+    background-color:white;
+    background-repeat: no-repeat;
+    background-position:center;
+    border: 0;
+    float:left;
+    /*?Frage-Wie kann man die Farbe der Pfeil ändern? - fill: hat nicht funktioniert*/
+}
+.notepad__textinput{
+    /*width: 100%; /*ganze breite von notepad*/
+    width: calc(100% - 30px); /*ganze breite von notepad; vor und nach der Minus !Abstand*/
+    height:30px;
+    display:block;
+    margin: 0;
+    padding: 2px 5px;
+    color:#ededed;
+    border: none;
+}
+.clearfix{
+    clear:both;
+}
+ul{
+    padding-left: 0px; /* liste beginnt gelich vom Boxrand*/
+    margin:0; /*ul stanard hat 24p margin >> soll auf 0 gestzt werden*/
+}
+
+ul li{
+    list-style-type: none;
+    padding: 10px 5px 10px 5px;
+    border-top: 2px solid  #ededed;
+}
+
+label{
+    display:inline-block;
+    /*border: 1px solid red; /*zur grössenkontrolle*/
+    /*align-items:center; /*nur bei flexbox*/
+    height:40px;
+    padding: 10px 0px 10px 50px; /* (50px) gut platz lassen das der checkbox-image reinpasst*/
+    background-repeat: no-repeat; /*Bild sich nicht wiederholt*/
+    background-size:30px; 
+    background-image: url(../img/todo_checkbox_notchecked.svg);
+    background-position: left center; /*Bild vertikal auch in der Mitte und links*/
+}
+
+input[type=checkbox] {
+    visibility: hidden; /* Start by hiding the checkboxes*/
+    position:absolute; /*oder display: none*/
+}
+
+/*input[type='checkbox'].list__checkbox:checked + label*/
+input[type='checkbox']:checked + label{
+    display:inline-block;
+    background-image: url(../img/todo_checkbox_checked.svg); /*0px center no-repeat*/
+}
+
+.btn__close{
+    height: 40px;
+    width: 40px;
+    /*padding:10px 10px;*/
+    margin:0;
+    float:right;
+    color:red;
+    font-size:1.5rem;
+    border: 0;
+    background-color:white;
+    cursor: pointer;
+}
+
+.list__status{
+    font-size: 0.80rem;
+}
+
+
